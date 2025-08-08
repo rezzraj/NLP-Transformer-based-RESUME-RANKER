@@ -8,7 +8,7 @@ import json
 # If on Windows, set tesseract path
 # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-folder_path = r"C:\Users\akshi\Downloads\converted_pdfs"
+folder_path = r"resume pdfs(data)"
 json_path = "resume_texts.json"
 
 resume_texts = {}
