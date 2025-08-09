@@ -1,0 +1,4 @@
+Seeking an AI/ML intern with strong Python skills, experience in machine learning frameworks like PyTorch or TensorFlow,
+knowledge of NLP techniques including transformers and embeddings, and ability to preprocess and analyze data.
+The candidate will assist in model development, training, fine-tuning, and evaluation, working closely with the team
+to build scalable AI solutions. Passion for learning and problem-solving is a must.

@@ -21,10 +21,10 @@ else:
     np.save(npy_path, resume_embedding)
     print('saved embeddings successfully')
 
-job_description="""Seeking an AI/ML intern with strong Python skills, experience in machine learning frameworks like PyTorch or TensorFlow, 
-knowledge of NLP techniques including transformers and embeddings, and ability to preprocess and analyze data. 
-The candidate will assist in model development, training, fine-tuning, and evaluation, working closely with the team 
-to build scalable AI solutions. Passion for learning and problem-solving is a must."""
+#opening job description text file from the folder
+
+with open('job_description.txt', 'r', encoding='utf-8') as f:
+    job_description = f.read()
 
 job_dec_path='job_description_embedding.npy'
 if os.path.exists(job_dec_path):
