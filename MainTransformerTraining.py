@@ -15,7 +15,7 @@ texts = df['cleaned_text'].tolist()
 npy_path='resume_embeddings.npy'
 if os.path.exists(npy_path):
     resume_embedding= np.load(npy_path)
-    print('loaded embeddings from npy file')
+    print('loaded resume embeddings from npy file')
 else:
     resume_embedding = model.encode(texts, batch_size=16, show_progress_bar=True)
     np.save(npy_path, resume_embedding)
