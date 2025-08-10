@@ -20,6 +20,21 @@
 
 Try the app live here:  
 [https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/](https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/)
+---
+
+## Quick Exercise for Recruiters 🚀
+
+1. Navigate to the `resume pdfs(data)` folder in this repo.  
+2. Download a few sample resume PDFs of your choice.  
+3. Head over to the live Streamlit app:  
+   [https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/](https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/)  
+4. Upload those resumes in the app.  
+5. Paste or type in a job description relevant to your role.  
+6. Click **Rank Resumes** and watch the AI pick the best fits!  
+7. Download the ranked results as a CSV to save or share.
+
+Try different job descriptions and see how the rankings change — it’s a hands-on way to see how powerful this AI resume ranker really is! 🎯🔥
+
 
 ---
 
