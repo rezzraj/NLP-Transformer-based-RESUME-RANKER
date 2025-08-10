@@ -1,10 +1,10 @@
-# NLP Transformer-Based Resume Ranker 🚀
+# NLP Transformer-Based Resume Ranker 
 
 **AI-powered automated resume ranking system** using transformers, OCR, and Streamlit — built to showcase full-stack NLP skills and help recruiters find the best fit fast.
 
 ---
 
-## Why This Project Slaps 💥
+## What this project does 
 
 - Uses **state-of-the-art transformer embeddings** (`all-mpnet-base-v2`) for semantic matching between resumes and job descriptions.
 - Converts resume PDFs → text via **OCR (pytesseract + pdf2image)** so no resume format or layout stops the pipeline.
@@ -12,7 +12,7 @@
 - Ranks resumes against a job description using **cosine similarity** on embeddings.
 - Validated using **Spearman rank correlation** to show AI ranking aligns strongly with human judgment.
 - Fully **deployed live with Streamlit** for instant, interactive use—no coding required.
-- Perfect portfolio flex for your GitHub and internship hunt. 👊
+ 
 
 ---
 
@@ -105,14 +105,14 @@ streamlit run app.py
 
 ---
 
-## Results 🎯
+## Results 
 
 - Spearman correlation > 0.9 showing **strong alignment** between AI-generated ranking and human judgment.
 - This means the model doesn’t just spit random scores—it matches recruiter intuition well.
 
 ---
 
-## Future Roadmap 🚀
+## Future Roadmap 
 
 - Add **keyword highlighting** in resumes to show why certain resumes scored higher.
 - Build **interactive filters/sliders** in the UI to customize ranking criteria.
@@ -142,14 +142,14 @@ All dependencies are listed in `requirements.txt`. Main ones include:
 
 ## License
 
-This project is licensed under the **MIT License** — 
+This project is licensed under the **MIT License** — rezzraj
 
 ---
 
 ## About Me
 
-Built by **rezzraj** — a student passionate about AI/ML and NLP, hustling to turn projects into real-world impact.  
-Find me on [GitHub](https://github.com/rezzraj) and [LinkedIn](https://www.linkedin.com/in/rezzraj/) for collabs, internships, and AI convos. 👊
+Built by **Akshit Raj** — B.tech 2nd year, and well im fascinated by the transformer architecture.  
+Find me on  [LinkedIn](https://www.linkedin.com/in/rezraj/) for collabs, internships, and AI convos. 
 
 ---
 
