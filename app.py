@@ -19,9 +19,6 @@ Image.MAX_IMAGE_PIXELS = None
 def load_model():
     return SentenceTransformer('all-mpnet-base-v2')
 
-def natural_key(s):
-    return [int(text) if text.isdigit() else text.lower()
-            for text in re.split(r'(\d+)', s)]
 
 def ocr_extract_text(uploaded_file):
     # Save to a temporary file first
