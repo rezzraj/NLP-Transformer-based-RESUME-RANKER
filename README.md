@@ -29,10 +29,9 @@ Try the app live here:
 flowchart TD
     A[Resume PDFs + Job Description] --> B[OCR Extraction]
     B --> C[Text Cleaning & Preprocessing]
-    C --> D[Transformer Embedding (all-mpnet-base-v2)]
+    C --> D[Transformer Embedding]
     D --> E[Cosine Similarity Ranking]
     E --> F[Streamlit UI & CSV Export]
-```
 
 ---
 
