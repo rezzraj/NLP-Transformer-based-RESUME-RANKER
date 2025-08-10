@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+pytesseract
+pdf2image
+Pillow
+sentence-transformers
+scikit-learn
