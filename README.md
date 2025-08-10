@@ -32,6 +32,8 @@ flowchart TD
     C --> D[Transformer Embedding]
     D --> E[Cosine Similarity Ranking]
     E --> F[Streamlit UI & CSV Export]
+```
+
 
 ---
 
