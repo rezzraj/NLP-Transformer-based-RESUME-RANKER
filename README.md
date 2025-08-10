@@ -4,7 +4,7 @@
 
 ---
 
-## What this project does (its 🔥)
+## What this project does 🔥
 
 - Uses **state-of-the-art transformer embeddings** (`all-mpnet-base-v2`) for semantic matching between resumes and job descriptions.
 - Converts resume PDFs → text via **OCR (pytesseract + pdf2image)** so no resume format or layout stops the pipeline.
