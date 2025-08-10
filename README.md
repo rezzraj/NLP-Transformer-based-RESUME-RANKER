@@ -33,6 +33,21 @@ Try the app live here:
 6. Click **Rank Resumes** and watch the AI pick the best fits!  
 7. Download the ranked results as a CSV to save or share.
 
+### Download Sample Resumes for Testing
+
+We keep a dedicated repo with all sample resume PDFs here:  
+[https://github.com/rezzraj/resume-samples](https://github.com/rezzraj/resume-samples)
+
+1. Click **Code → Download ZIP** to grab all sample resumes.  
+2. Extract the zip file on your machine.  
+3. Upload the PDFs inside the extracted folder to the Streamlit app here:  
+   [https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/](https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/)  
+4. Paste your job description, hit **Rank Resumes**, and flex on your hiring process.
+
+---
+
+
+
 Try different job descriptions and see how the rankings change — it’s a hands-on way to see how powerful this AI resume ranker really is! 🎯🔥
 
 
