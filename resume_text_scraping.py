@@ -4,7 +4,6 @@ import json
 import pytesseract
 from pdf2image import convert_from_path
 from PIL import Image
-
 Image.MAX_IMAGE_PIXELS = None
 
 # Paths

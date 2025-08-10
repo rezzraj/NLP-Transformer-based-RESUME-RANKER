@@ -69,6 +69,5 @@ print(df[['filename', 'score']])
 #checking the accuracy by spearman correlation
 corr, p_value = spearmanr(df['manual_rank_flipped'], df['score'])
 
-
 print(f"Spearman correlation : {corr:.4f} indicating strong alignment bw AI ranking and Human judgement")
 print(f"P-value : {p_value:.4g} ")
