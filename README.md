@@ -32,6 +32,8 @@ Try the app live here:
 5. Paste or type in a job description relevant to your role.  
 6. Click **Rank Resumes** and watch the AI pick the best fits!  
 7. Download the ranked results as a CSV to save or share.
+---
+
 
 ### Download Sample Resumes for Testing
 
