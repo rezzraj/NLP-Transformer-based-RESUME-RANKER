@@ -30,24 +30,21 @@ def ocr_extract_text(uploaded_file):
         tmp_file.write(uploaded_file.read())
         tmp_path = tmp_file.name
 
-    doc = fitz.open(tmp_path)
     text = ""
+    doc = fitz.open(tmp_path)
 
-    for page in doc:
-        # Extract text normally first (for text PDFs)
-        page_text = page.get_text()
-        if page_text.strip():
-            text += page_text + "\n"
-        else:
-            # No text? Try extracting images and OCR each
-            image_list = page.get_images(full=True)
-            for img_index, img in enumerate(image_list):
-                xref = img[0]
-                base_image = doc.extract_image(xref)
-                image_bytes = base_image["image"]
-                image = Image.open(io.BytesIO(image_bytes))
-                ocr_text = pytesseract.image_to_string(image)
-                text += ocr_text + "\n"
+    for page_num in range(len(doc)):
+        # Render page to high-res image
+        pix = doc[page_num].get_pixmap(dpi=300)
+        img = Image.open(io.BytesIO(pix.tobytes()))
+
+        # Preprocess image for OCR
+        img = img.convert("L")  # grayscale
+        img = img.point(lambda x: 0 if x < 200 else 255, '1')  # simple threshold
+
+        # OCR the image
+        ocr_text = pytesseract.image_to_string(img)
+        text += ocr_text + "\n"
 
     return text.strip()
 
