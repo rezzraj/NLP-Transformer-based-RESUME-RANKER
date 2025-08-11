@@ -8,7 +8,9 @@ from PIL import Image
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import tempfile
-import pdfplumber
+import fitz
+import io
+
 # Avoid image size errors
 Image.MAX_IMAGE_PIXELS = None
 
@@ -28,12 +30,25 @@ def ocr_extract_text(uploaded_file):
         tmp_file.write(uploaded_file.read())
         tmp_path = tmp_file.name
 
+    doc = fitz.open(tmp_path)
     text = ""
-    with pdfplumber.open(tmp_path) as pdf:
-        for page in pdf.pages:
-            page_text = page.extract_text()
-            if page_text:
-                text += page_text + "\n"
+
+    for page in doc:
+        # Extract text normally first (for text PDFs)
+        page_text = page.get_text()
+        if page_text.strip():
+            text += page_text + "\n"
+        else:
+            # No text? Try extracting images and OCR each
+            image_list = page.get_images(full=True)
+            for img_index, img in enumerate(image_list):
+                xref = img[0]
+                base_image = doc.extract_image(xref)
+                image_bytes = base_image["image"]
+                image = Image.open(io.BytesIO(image_bytes))
+                ocr_text = pytesseract.image_to_string(image)
+                text += ocr_text + "\n"
+
     return text.strip()
 
 def remove_special_chars(text):

@@ -5,4 +5,6 @@ pytesseract
 Pillow
 sentence-transformers
 scikit-learn
-pdfplumber
+PyMuPDF
+
+
