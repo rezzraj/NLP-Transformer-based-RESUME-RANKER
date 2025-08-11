@@ -7,6 +7,9 @@ import numpy as np
 import os
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.stats import spearmanr
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
 
 model = SentenceTransformer('all-mpnet-base-v2')
 
