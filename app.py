@@ -110,3 +110,4 @@ if st.button("Rank Resumes"):
             file_name="resume_rankings.csv",
             mime="text/csv"
         )
+
