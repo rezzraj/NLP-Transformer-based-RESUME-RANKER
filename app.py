@@ -48,6 +48,7 @@ def ocr_extract_text(uploaded_file):
 
     return text.strip()
 
+
 def remove_special_chars(text):
     text = text.lower()
     text = text.replace('\n', ' ')
