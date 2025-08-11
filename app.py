@@ -8,6 +8,7 @@ from PIL import Image
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import tempfile
+import pdfplumber
 # Avoid image size errors
 Image.MAX_IMAGE_PIXELS = None
 
@@ -23,19 +24,17 @@ def load_model():
 
 
 def ocr_extract_text(uploaded_file):
-    # Save to a temporary file first
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
         tmp_file.write(uploaded_file.read())
         tmp_path = tmp_file.name
 
-    # Just ONE call to convert_from_path with poppler_path
-    pages = convert_from_path(tmp_path, poppler_path='/usr/bin')
-
     text = ""
-    for page in pages:
-        text += pytesseract.image_to_string(page) + "\n"
+    with pdfplumber.open(tmp_path) as pdf:
+        for page in pdf.pages:
+            page_text = page.extract_text()
+            if page_text:
+                text += page_text + "\n"
     return text.strip()
-
 
 def remove_special_chars(text):
     text = text.lower()
