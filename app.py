@@ -14,6 +14,8 @@ Image.MAX_IMAGE_PIXELS = None
 # ---------------------------
 # Helper Functions
 # ---------------------------
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
 
 @st.cache_resource
 def load_model():
@@ -26,7 +28,9 @@ def ocr_extract_text(uploaded_file):
         tmp_file.write(uploaded_file.read())
         tmp_path = tmp_file.name
 
-    pages = convert_from_path(tmp_path)
+    # Just ONE call to convert_from_path with poppler_path
+    pages = convert_from_path(tmp_path, poppler_path='/usr/bin')
+
     text = ""
     for page in pages:
         text += pytesseract.image_to_string(page) + "\n"
