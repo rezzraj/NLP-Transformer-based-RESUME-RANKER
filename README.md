@@ -161,6 +161,7 @@ All dependencies are listed in `requirements.txt`. Main ones include:
 
 - `pytesseract`
 - `pdf2image`
+- `PyMuPDF`
 - `sentence-transformers`
 - `scikit-learn`
 - `streamlit`
