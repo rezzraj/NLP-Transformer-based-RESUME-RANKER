@@ -7,8 +7,8 @@
 ## What this project does 🔥
 
 - Uses **state-of-the-art transformer embeddings** (`all-mpnet-base-v2`) for semantic matching between resumes and job descriptions.
-- Converts resume PDFs → text via **OCR (pytesseract + pdf2image)** so no resume format or layout stops the pipeline.
-- Cleans and preprocesses raw OCR text into clean, normalized, model-ready input.
+- Converts resume PDFs → text via **OCR[for images inside pdfs aswell as regular pdfs] (pytesseract + pdf2image)** so no resume format or layout stops the pipeline.
+- Cleans and preprocesses raw OCR/PDF-extracted text into clean, normalized, model-ready input.
 - Ranks resumes against a job description using **cosine similarity** on embeddings.
 - Validated using **Spearman rank correlation** to show AI ranking aligns strongly with human judgment.
 - Fully **deployed live with Streamlit** for instant, interactive use—no coding required.
@@ -24,8 +24,8 @@ Try the app live here:
 
 ## Quick Exercise for Recruiters 🚀
 
-1. Navigate to the `resume pdfs(data)` folder in this repo.  
-2. Download a few sample resume PDFs of your choice.  
+1. Navigate to the `sample-resume-repo` below .  
+2. Download a few sample resume PDFs  or download whole repository as zip.  
 3. Head over to the live Streamlit app:  
    [streamlit app](https://rezzraj-nlp-transformer-based-resume-ranker-app-hpudqg.streamlit.app/)  
 4. Upload those resumes in the app.  
@@ -105,13 +105,13 @@ streamlit run app.py
 ### 1. OCR Extraction (`resume_text_extractor.py`)
 
 - Takes a folder of resume PDFs.
-- Converts each page of PDFs into images using `pdf2image`.
+- Converts each page of PDFs into images(If cant read the pdf or if the pdf is just image inside it) using `pdf2image`(the streamlit deployed version does not support pdf2image so using PyMuPDF :( still working on it, however you can upload regular actual pdfs.
 - Runs OCR via `pytesseract` to extract raw text.
 - Saves the extracted text for all resumes into a JSON file (`resume_texts.json`) to avoid repeated OCR.
 
 ### 2. Text Cleaning & Preprocessing (`text_preprocessing.py`)
 
-- Loads the raw OCR text.
+- Loads the raw extracted text.
 - Applies text normalization:
   - Lowercasing all letters.
   - Removing newlines, special characters, excessive whitespace.
