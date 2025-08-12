@@ -59,7 +59,7 @@ Try different job descriptions and see how the rankings change — it’s a hand
 
 ```mermaid
 flowchart TD
-    A[Resume PDFs + Job Description] --> B[OCR Extraction]
+    A[Resume PDFs + Job Description] --> B[Text Extraction]
     B --> C[Text Cleaning & Preprocessing]
     C --> D[Transformer Embedding]
     D --> E[Cosine Similarity Ranking]
