@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import re
 import pytesseract
-from pdf2image import convert_from_path
 from PIL import Image
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity

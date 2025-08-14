@@ -1,0 +1,21 @@
+MainTransformerTraining OUTPUT-
+
+loaded resume embeddings from npy file
+loaded job desc embeddings from npy file
+        filename     score
+1    resume6.pdf  0.693317
+2    resume2.pdf  0.581547
+3   resume11.pdf  0.577663
+4    resume5.pdf  0.525688
+5    resume4.pdf  0.487892
+6    resume1.pdf  0.383501
+7    resume3.pdf  0.378999
+8   resume10.pdf  0.368190
+9    resume8.pdf  0.367089
+10  resume13.pdf  0.365258
+11   resume7.pdf  0.294373
+12  resume12.pdf  0.246127
+13   resume9.pdf  0.193797
+
+Spearman correlation : 0.6484 indicating strong alignment bw AI ranking and Human judgement
+P-value : 0.01654
