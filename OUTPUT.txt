@@ -17,5 +17,5 @@ loaded job desc embeddings from npy file
 12  resume12.pdf  0.246127
 13   resume9.pdf  0.193797
 
-Spearman correlation : 0.6484 indicating strong alignment bw AI ranking and Human judgement
-P-value : 0.01654
+Spearman correlation : 0.5902 indicating strong alignment bw AI ranking and Human judgement
+P-value : 0.0349
