@@ -18,4 +18,4 @@ loaded job desc embeddings from npy file
 13   resume9.pdf  0.193797
 
 Spearman correlation : 0.5902 indicating strong alignment bw AI ranking and Human judgement
-P-value : 0.0349
+P-value : 0.0345
